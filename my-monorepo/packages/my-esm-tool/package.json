@@ -1,0 +1,9 @@
+{
+  "name": "@jorisguffens/my-esm-tool",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "type": "module",
+  "dependencies": {
+    "@jorisguffens/their-cjs-tool": "1.0.0"
+  }
+}
