@@ -26,13 +26,9 @@ I created a simple 3rd party package myself (`their-cjs-tool`) and published it 
 
 ## Cause
 
-The node-adapter will mark all direct dependencies of my-sveltekit-app as external, however this does not take into account the dependencies of those dependencies. As you can see in the following snippet from `adapter-node`:
-```
-external: [
-    // dependencies could have deep exports, so we need a regex
-    ...Object.keys(pkg.dependencies || {}).map((d) => new RegExp(`^${d}(\\/.*)?$`))
-]
-```
+The node-adapter will mark all direct dependencies of my-sveltekit-app as external, however this does not take into account the dependencies of a linked dependency (`my-esm-tool`).
+
+
 
 ## Solution
 
