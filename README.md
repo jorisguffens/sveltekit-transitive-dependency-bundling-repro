@@ -27,11 +27,3 @@ I created a simple 3rd party package myself (`their-cjs-tool`) and published it 
 ## Cause
 
 The node-adapter will mark all direct dependencies of my-sveltekit-app as external, however this does not take into account the dependencies of a linked dependency (`my-esm-tool`).
-
-
-
-## Solution
-
-The following change will instead externalize everything from the `node_modules` directory, which fixes the issue.
-
-https://github.com/sveltejs/kit/compare/main...resultx-ai:sveltekit:main
